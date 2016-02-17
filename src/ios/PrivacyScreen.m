@@ -111,10 +111,10 @@
         iv.tag = 4;
         
         // hard coded background color:
-        //blurView.backgroundColor = [UIColor colorWithRed:133./255. green:255./255. blue:128./255. alpha:1];
+        blurView.backgroundColor = [UIColor colorWithRed:133./255. green:255./255. blue:128./255. alpha:1];
         
         // sampled background color:
-        blurView.backgroundColor = [self pixelColorInImage:logo atX:0 atY:0];
+        //blurView.backgroundColor = [self pixelColorInImage:logo atX:0 atY:0];
         
         [blurView addSubview:iv];
         iv.center = blurView.center;
