@@ -1,14 +1,11 @@
 var exec = require('cordova/exec');
 
-// function PrivacyScreenPlugin() { }
+var PrivacyScreen = {
+	enable: function() {
+		return new Promise( function(success, error) {
+            exec(success, error, "PrivacyScreen", "enable");
+		});
+	}
+}
 
-// PrivacyScreenPlugin.prototype.activate = function(callback) {
-//     exec( function(result){ callback( undefined, result); }
-//         , function(error){ callback( error ); }
-//         , "PrivacyScreen"
-//         , "activate"
-//         , []
-//         );
-// };
-
-// module.exports = new PrivacyScreenPlugin();
+module.exports = PrivacyScreen;

@@ -8,6 +8,6 @@
 
 @interface PrivacyScreen : CDVPlugin
 
-- (void) activate:(CDVInvokedUrlCommand *) command;
+- (void) enable:(CDVInvokedUrlCommand *) command;
 
 @end

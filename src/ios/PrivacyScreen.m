@@ -25,9 +25,28 @@
 
 @implementation PrivacyScreen
 
-- (void) activate:(CDVInvokedUrlCommand *) command
+- (void) enable:(CDVInvokedUrlCommand *) command
 {
-    
+    NSLog(@"Enabling privacy screen start");
+    @try {
+        [self removeObservers];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.reason);
+    }
+    @try {
+    [self addObservers];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.reason);
+    }
+    @try {
+    [self blurView];
+    }
+    @catch (NSException *exception) {
+        NSLog(@"%@", exception.reason);
+    }
+    NSLog(@"Enabling privacy screen end");
     [self.commandDelegate sendPluginResult:[CDVPluginResult resultWithStatus:CDVCommandStatus_OK] callbackId:command.callbackId];
 }
 

@@ -22,6 +22,9 @@
                 <param name="onload" value="true" />
             </feature>
         </config-file>
+        <js-module src="www/PrivacyScreenPlugin.js" name="PrivacyScreenPlugin">
+            <clobbers target="window.PrivacyScreen" />
+        </js-module>
         <source-file src="src/ios/PrivacyScreen.h"/>
         <source-file src="src/ios/PrivacyScreen.m"/>
         <source-file src="src/ios/FXBlurView.h"/>
